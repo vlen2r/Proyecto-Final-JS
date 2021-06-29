@@ -1,1 +1,6 @@
-import "./styles.css"; //Este include nos permite exportarlo al dist como un componente aparte y no en el main.js
+import { getUsuario } from "./js/crud-provider";
+import "./styles.css";
+
+getUsuario(15)
+    .then(msg => { console.log(msg) })
+    .catch(msg => { console.error(msg) });
